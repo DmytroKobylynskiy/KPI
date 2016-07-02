@@ -1,0 +1,119 @@
+V "GNAT Lib v2014"
+A -gnatA
+P ZX
+
+RN
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U data%b		data.adb		e42a3e51 NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U data%s		data.ads		0c46cc5a BN EE NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20140406181354 3ffc8e18 ada%s
+D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
+D a-finali.ads		20140406181358 69f99942 ada.finalization%s
+D a-inteio.ads		20140406181358 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20140406181354 1a984740 ada.streams%s
+D a-tags.ads		20140406181356 dc4d0634 ada.tags%s
+D a-textio.ads		20140406181358 386df5d4 ada.text_io%s
+D a-tiinio.ads		20140406181358 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20140406181358 f9eb8f06 ada.unchecked_conversion%s
+D data.ads		20160511155346 342b398e data%s
+D data.adb		20160511173320 1e277baf data%b
+D interfac.ads		20140406181358 69adb1b9 interfaces%s
+D i-cstrea.ads		20140406181356 febc86ed interfaces.c_streams%s
+D system.ads		20140406181358 5fc8ae56 system%s
+D s-crtl.ads		20140406181356 2c012597 system.crtl%s
+D s-exctab.ads		20140406181354 54135002 system.exception_table%s
+D s-ficobl.ads		20140406181354 078245e4 system.file_control_block%s
+D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
+D s-finroo.ads		20140406181358 4ff27390 system.finalization_root%s
+D s-parame.ads		20140406181358 06da98b2 system.parameters%s
+D s-pooglo.ads		20140406181356 542f33d0 system.pool_global%s
+D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
+D s-stache.ads		20140406181354 a37c21ec system.stack_checking%s
+D s-stalib.ads		20140406181354 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140406181356 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140406181354 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20140406181356 b16154c2 system.storage_pools%s
+D s-traent.ads		20140406181354 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
+D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 11|15r9 16r8 12|14r9 14r22 15r8 15r21
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|46] 12|14w26 15r25
+X 8 a-textio.ads
+49K13*Text_IO 471e16 11|15w13 16r12 12|14w13 15r12
+73I12*Field{integer}
+166U14*New_Line 12|40s5 44s5 50s5 55s5 57s5
+X 9 a-tiinio.ads
+66U14*Put 12|42s5[4|18] 53s5[4|18]
+67i7 Item{integer} 12|42r9[4|18] 53r9[4|18]
+68i7 Width{8|73I12} 12|42r23[4|18] 53r27[4|18]
+X 11 data.ads
+20i5 N{natural} 25r34 32r34 12|21r17 30r17 31r17 52r17 95r14 97r14
+20i8 H{natural} 26r39 27r39 28r39 29r34 33r39 34r39 35r39 36r34 12|64r17
+. 93r14
+22k12*Data 20z5 20z8 62l8 62e12 12|17b17 106l8 106t12
+24A10*Vector(integer)<integer> 25r24 26r25 27r25 28r25 29r24 39r31 45r30
+. 12|19r30 38r30
+25A13*VectorN{24A10}<integer> 31r47 55r10 12|84r12
+26A13*Vector6h{24A10}<integer>
+27A13*Vector3h{24A10}<integer>
+28A13*Vector2H{24A10}<integer>
+29A13*VectorH{24A10}<integer> 49r30 56r10 59r13 12|60r32 85r12 88r13
+31A10*Matrix(25A13)<integer> 32r24 33r25 34r25 35r25 36r24 42r32 47r29 12|28r31
+. 48r31
+32A13*MatrixN{31A10}<integer> 58r11 12|87r13
+33A13*Matrix6h{31A10}<integer>
+34A13*Matrix3h{31A10}<integer>
+35A13*Matrix2H{31A10}<integer>
+36A13*MatrixH{31A10}<integer> 57r11 12|86r13
+39U15*Input 39<23 40>5 12|19b15 25l9 25t14
+39a23 V{24A10} 12|19b22 22m5
+40i5 Value{integer} 12|19b38 22r12
+42U15*Input 42<23 43>5 12|28b15 35l9 35t14
+42a23 MA{31A10} 12|28b22 32m5
+43i5 Value{integer} 12|28b39 32r16
+45U15*Output 45>23 12|38b15 45l9 45t15
+45a23 V{24A10} 12|38b23 41r17 42r17
+47U13*Output 47>21 12|48b15 58l9 58t15
+47a21 MA{31A10} 12|48b23 51r17 53r17
+49U13*FindMaxZ 49>23 49<39 12|60b15 70l9 70t17
+49a23 V{29A13} 12|60b25 65r17 66r15
+49i39 maxZi{integer} 12|60b41 69m5
+51V12*Max{integer} 51>17 51>20 12|72b14 79l9 79t12
+51i17 A{integer} 12|72b19 74r8 75r12
+51i20 B{integer} 12|72b22 74r13 77r12
+53U13*Calculation 53>26 54>3 55>3 56>3 57>3 58>3 59<5 12|81b15 104l9 104t20
+53i26 alfa{integer} 12|82b5 102r30
+54i3 maxZ{integer} 12|83b5 102r17
+55a3 B{25A13} 12|84b5 100r25
+56a3 E{29A13} 12|85b5 102r24
+57a3 MO{36A13} 12|86b5 98r17
+58a3 MK{32A13} 12|87b5 98r27
+59a5 A{29A13} 12|88b5 102m5
+X 12 data.adb
+21i9 I{integer} 22r7
+30i9 I{integer} 32r8
+31i9 J{integer} 32r11
+41i9 I{integer} 42r19
+51i9 I{integer} 53r20
+52i9 J{integer} 53r23
+61i5 maxBuf{integer} 63m5 65r8 66m5 69r12
+64i9 i{integer} 65r19 66r17
+89i5 Sum{integer} 96m2 98m4 98r11 100r19
+90i5 Sum1{integer} 94m2 100m4 100r12 102r12
+93i6 I{integer} 98r20 102r7 102r26
+95i6 j{integer} 98r33 100r27
+97i6 K{integer} 98r23 98r30
+

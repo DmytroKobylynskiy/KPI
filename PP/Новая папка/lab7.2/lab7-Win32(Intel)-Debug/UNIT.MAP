@@ -1,0 +1,24 @@
+SOURCE: ..\..\lab5\lab5.adb
+  SRCTIME: 1462981555    Wed May 11 18:45:55 2016
+  UNIT: lab5
+    UKIND: 2    SUBP_BODY
+ENDSOURCE
+SOURCE: ..\..\lab5\data.adb
+  SRCTIME: 1462981524    Wed May 11 18:45:24 2016
+  UNIT: Input
+    UKIND: 2    SUBP_BODY
+  UNIT: Output
+    UKIND: 2    SUBP_BODY
+  UNIT: Calculation
+    UKIND: 2    SUBP_BODY
+ENDSOURCE
+SOURCE: ..\..\lab5\data.ads
+  SRCTIME: 1462981524    Wed May 11 18:45:24 2016
+  UNIT: Data
+    UKIND: 9    PKG_GENERIC
+ENDSOURCE
+SOURCE: ..\..\lab7\lab7.adb
+  SRCTIME: 1462986331    Wed May 11 20:05:31 2016
+  UNIT: lab7
+    UKIND: 2    SUBP_BODY
+ENDSOURCE

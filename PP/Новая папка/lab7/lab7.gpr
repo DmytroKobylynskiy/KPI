@@ -1,0 +1,6 @@
+project Lab7 is
+
+   for Main use ("lab7.adb");
+
+end Lab7;
+

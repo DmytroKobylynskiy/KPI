@@ -1,0 +1,15 @@
+SOURCE: ..\..\lab5\lab5.adb
+  SRCTIME: 1460562093    Wed Apr 13 18:41:33 2016
+  UNIT: Lab5
+    UKIND: 2    SUBP_BODY
+ENDSOURCE
+SOURCE: ..\..\lab5\data.adb
+  SRCTIME: 1460480874    Tue Apr 12 20:07:54 2016
+  UNIT: Data
+    UKIND: 8    PKG_BODY
+ENDSOURCE
+SOURCE: ..\..\lab5\data.ads
+  SRCTIME: 1460480471    Tue Apr 12 20:01:11 2016
+  UNIT: Data
+    UKIND: 9    PKG_GENERIC
+ENDSOURCE

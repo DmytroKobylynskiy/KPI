@@ -1,0 +1,9 @@
+if (A[3]>A[1]){
+					A[N-1] = A[3];
+					for (int i = 0; i < N - 1; i++)
+						A[i] = A[1];
+				}
+				else{
+					for (int i = 0; i < N; i++)
+						A[i] = A[1];
+				}

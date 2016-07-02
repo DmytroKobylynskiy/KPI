@@ -1,0 +1,22 @@
+SOURCE: ..\..\lab5\data.adb
+  SRCTIME: 1462981524    Wed May 11 18:45:24 2016
+  COMPSW: -eo -e 50 -m n -mr n -gc -ga
+COMPVER: 8.4
+MAXSEV: 10
+SRCDEP: ada.ada
+  SRCDEPTIME: 1184920158    Fri Jul 20 11:29:18 2007
+SRCDEP: ada.text_io.spc
+  SRCDEPTIME: 1184920116    Fri Jul 20 11:28:36 2007
+SRCDEP: ada.io_exceptions.dat
+  SRCDEPTIME: 1184920094    Fri Jul 20 11:28:14 2007
+SRCDEP: ada.integer_text_io.ada
+  SRCDEPTIME: 1184920092    Fri Jul 20 11:28:12 2007
+UNIT: Input
+  UKIND: 2    SUBP_BODY
+ENDUNIT
+UNIT: Output
+  UKIND: 2    SUBP_BODY
+ENDUNIT
+UNIT: Calculation
+  UKIND: 2    SUBP_BODY
+ENDUNIT
