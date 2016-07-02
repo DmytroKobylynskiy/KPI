@@ -1,0 +1,87 @@
+---DONE 3
+SELECT p.product_name, i1.purchase_time, ii.QUANTITY
+FROM PRODUCT P
+INNER JOIN invoice_detail i
+ON p.id_product = i.id_product
+INNER JOIN invoice_detail ii
+ON ii.QUANTITY = i.QUANTITY
+INNER JOIN INVOICE i1
+ON i1.id_invoice = i.id_invoice
+WHERE  REGEXP_LIKE(i1.purchase_time,'(0[1-9]|[12][0-9]|3[01])[- /.](0[6-9]|1[012])[- /.](19|20)\d\d') and ii.quantity=0
+GROUP BY p.product_name, i1.purchase_time, ii.QUANTITY
+---
+---DONE 6
+with cte(id_supplier, id_product, popularity) as
+(select id_supplier, product.id_product, popularity 
+from 
+(select id_product, count(id_product) popularity from invoice_detail
+group by id_product) X, product
+where x.id_product = product.id_product)
+
+select distinct cte.id_supplier, x.maxPop, cte.id_product from (select id_supplier, max(popularity)as maxPop from cte group by id_supplier) X, 
+cte
+where maxPop = cte.popularity;
+---
+
+---DONE 9
+WITH CTE(ID_STUFF,COUNT_MX) AS
+  (select QUANTITY, COUNT(quantity) AS COUNT_MX
+  from INVOICE,INVOICE_DETAIL
+  group by quantity)
+select distinct INVOICE.ID_STUFF,COUNT_MX
+from CTE, INVOICE
+  where invoice.ID_STUFF = CTE.ID_STUFF AND CTE.COUNT_mx = (select MAX(COUNT_MX) FROM CTE);
+---
+
+---DONE 12
+WITH CTE(quantity, frequency) AS
+  (select quantity, COUNT(quantity)
+  from invoice_detail
+  group by quantity)
+select distinct invoice_detail.quantity, frequency
+from CTE, invoice_detail
+  where invoice_detail.quantity = CTE.quantity AND CTE.frequency = (select MAX(frequency) FROM CTE);
+
+---
+WITH CTE(ID_STUFF,COUNT_MX) AS
+  (select QUANTITY, COUNT(quantity) AS COUNT_MX
+  from INVOICE,INVOICE_DETAIL
+  group by quantity)
+select distinct INVOICE.ID_STUFF,COUNT_MX
+from CTE, INVOICE
+  where invoice.ID_STUFF = CTE.ID_STUFF AND CTE.COUNT_mx = (select MAX(COUNT_MX) FROM CTE);
+
+
+(select invoice_detail.QUANTITY, MAX(invoice_detail.QUANTITY) as popularity 
+from invoice_detail
+group by QUANTITY)
+
+WITH CTE(product_id, popularity) AS
+(select QUANTITY, count(QUANTITY) as popularity 
+from invoice_detail
+group by QUANTITY)
+
+
+select id_product_type, popularity 
+from product, CTE
+where product.id_product = CTE.product_id AND CTE.popularity = 
+(select MAX(popularity) from CTE);
+
+
+with cte(id_supplier, id_product, popularity) as
+(select id_supplier, product.id_product, popularity 
+from 
+(select id_product, count(id_product) popularity from invoice_detail
+group by id_product) X, product
+where x.id_product = product.id_product)
+
+select distinct cte.id_supplier, x.maxPop, cte.id_product from (select id_supplier, max(popularity)as maxPop from cte group by id_supplier) X, 
+cte
+where maxPop = cte.popularity;
+
+
+
+select distinct st.id_product, p.id_product
+from store st
+join product p
+on st.id_product=p.id_product

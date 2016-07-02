@@ -1,0 +1,20 @@
+select a.*
+from invoice a
+where  not regexp_like(a.invoice_date, '([0-3][0-9].[0-1][0-9].201[1-3])|([0-3][0-9].0[1-5].2014)')
+
+select *
+from store
+where not regexp_like(oper_type, '([iI][nN]$)|([oO][uU][tT]$)')
+
+select * 
+from INVOICE
+where (not regexp_like(invoice.product, 'TV-[0-9]*')) or (invoice.product is null)
+
+select *
+from store
+where  oper_type not like 'in' and oper_type not like 'out' and oper_type not like 'Out' and oper_type not like 'In'
+
+select distinct first.id_stuff ,
+(select count (E_MAIL) from invoice second where second.id_stuff=first.id_stuff )count_email , 
+(select count (STAFF_NAME) from invoice second where second.STAFF_NAME!=first.STAFF_NAME ) count_staff
+from invoice first ;
